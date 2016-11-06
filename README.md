@@ -1,7 +1,7 @@
 # TSOC_PSoC4L - PSoC4 (Large) Embedded Module :
 
 
-The TSOC_PSoC4L is a [PSoC4-Programmable System on Chip](http://www.cypress.com/documentation/datasheets/psoc-4-psoc-4200l-family-datasheet)"
+The TSOC_PSoC4L is a [PSoC4-Programmable System on Chip](http://www.cypress.com/documentation/datasheets/psoc-4-psoc-4200l-family-datasheet)
 based board with integrated USB and Li-Po battery power and charging functions, 
 in an Embedded Module format for the new thingSoC, Internet of Things open standard.
 
@@ -29,7 +29,7 @@ The TSOC_PSoC4L is a low cost, embeddable module featuring a PSoC4 "Large" devic
 * <a href="http://www.mikroe.com/mikrobus/">Mikrobus Compatible Module</a></li> 
 
 
-[![thingSoC TSOC_PSoC4L](https://raw.githubusercontent.com/thingSoC/TSOC_PSoC4L/master/TSOC_PSoC4L/images/product/TSOC_PSoC4L_model.png?raw=true)TSOC_PSoC4L](https://github.com/thingSoC/TSOC_PSoC4L)
+[![thingSoC TSOC_PSoC4L](https://raw.githubusercontent.com/thingSoC/TSOC_PSoC4L/master/TSOC_PSoC4L/images/TSOC_PSoC4L_model.png?raw=true)TSOC_PSoC4L](https://github.com/thingSoC/TSOC_PSoC4L)
 
 **thingSoC Reference Designs** are example thingSoC implementations that implement
 various reference and testing circuits for demonstrating the use of the thingSoC libraries.
@@ -53,16 +53,12 @@ Select Tools -> Bootloader Host
 
 Then select the hex (cyacd) file that you wish to program, and the COM: port of your device. Proess the "Upload" button to reflash the device.
 
-[![thingSoC TSOC_PSoC4L](https://raw.githubusercontent.com/thingSoC/TSOC_PSoC4L/master/TSOC_PSoC4L/images/product/TSOC_PSoC4L_bootloader.png?raw=true)PSoC Creator Bootloader Host](https://github.com/thingSoC/TSOC_PSoC4L)
-
 
 ---------------------------------------
 ## Other Applications
 
-The TSOC_PSoC4L can also drive other devices, such as Servos, Motors, Realys and more.
+The TSOC_PSoC4L can also drive other devices, such as Servos, Motors, Relays and more.
 This requires custom firmware at the current time.
-
-[![thingSoC TSOC_PSoC4L](https://raw.githubusercontent.com/thingSoC/TSOC_PSoC4L/master/TSOC_PSoC4L/images/product/TSOC_PSoC4L_servo.png?raw=true)TSOC_PSoC4L with Servo](https://github.com/thingSoC/TSOC_PSoC4L)
 
 
 ---------------------------------------
