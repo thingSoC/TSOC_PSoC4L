@@ -16145,6 +16145,19 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <text x="-0.254" y="1.27" size="0.635" layer="33" ratio="10" rot="R270">&gt;name</text>
 <rectangle x1="-1.27" y1="-0.508" x2="1.27" y2="0.508" layer="39" rot="R270"/>
 </package>
+<package name="AVX-A">
+<wire x1="-2.0955" y1="0.8255" x2="2.0955" y2="0.8255" width="0.127" layer="21"/>
+<wire x1="2.0955" y1="0.8255" x2="2.0955" y2="-0.8255" width="0.127" layer="21"/>
+<wire x1="2.0955" y1="-0.8255" x2="-2.0955" y2="-0.8255" width="0.127" layer="21"/>
+<wire x1="-2.0955" y1="-0.8255" x2="-2.0955" y2="0.8255" width="0.127" layer="21"/>
+<wire x1="-0.4445" y1="0" x2="0.0635" y2="0" width="0.127" layer="21"/>
+<wire x1="-0.1905" y1="-0.254" x2="-0.1905" y2="0.254" width="0.127" layer="21"/>
+<smd name="+" x="-1.27" y="0" dx="1.27" dy="1.27" layer="1"/>
+<smd name="-" x="1.27" y="0" dx="1.27" dy="1.27" layer="1" rot="R180"/>
+<text x="-1.905" y="1.016" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-1.905" y="-2.159" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-2.159" y1="-0.889" x2="2.159" y2="0.889" layer="39"/>
+</package>
 </packages>
 <symbols>
 <symbol name="C">
@@ -16158,6 +16171,17 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <text x="-3.81" y="-2.54" size="1.27" layer="96" ratio="10">&gt;VALUE</text>
 <pin name="1" x="-3.81" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 <pin name="2" x="3.81" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+</symbol>
+<symbol name="CAP-POLAR">
+<wire x1="-1.27" y1="2.54" x2="-1.27" y2="-2.54" width="0.508" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.508" layer="94" curve="47.924978"/>
+<wire x1="1.27" y1="0" x2="0.635" y2="0" width="0.1524" layer="94"/>
+<text x="-2.54" y="0" size="1.27" layer="93" ratio="10">+</text>
+<text x="-6.35" y="3.81" size="1.27" layer="95" ratio="10">&gt;NAME</text>
+<text x="1.27" y="3.81" size="1.27" layer="96" ratio="10">&gt;VALUE</text>
+<text x="1.27" y="0" size="1.27" layer="93" ratio="10">-</text>
+<pin name="+" x="-3.81" y="0" visible="off" length="short" direction="pas"/>
+<pin name="-" x="3.81" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -16241,6 +16265,26 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 </device>
 </devices>
 </deviceset>
+<deviceset name="TANTALUM-SMD-47UF-6.3V(AVX-A)" prefix="C" uservalue="yes">
+<description>302020005</description>
+<gates>
+<gate name="G$1" symbol="CAP-POLAR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="AVX-A">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="TAJA476*006#NJ"/>
+<attribute name="VALUE" value="47uf"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="Seeed-Resistor-2016">
@@ -16284,6 +16328,26 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <technology name="">
 <attribute name="MPN" value="RC0603JR-0710KL" constant="no"/>
 <attribute name="VALUE" value="10K 1/10W" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMD-RES-0R-5%-1/10W(0603)" prefix="R" uservalue="yes">
+<description>301010292</description>
+<gates>
+<gate name="G$1" symbol="RES" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="R0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="RC0603JR-070RL" constant="no"/>
+<attribute name="VALUE" value="0R"/>
 </technology>
 </technologies>
 </device>
@@ -17132,21 +17196,23 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="VCC" library="PatternAgents-ProtoPads" deviceset="JMP-3-1_2" device=""/>
 <part name="RESET" library="Seeed-Switch-2016" deviceset="SMD-BUTTON(2P-3.0X2.5X1.2+0.4MM)" device="-B3U-1000P-2P-SMD" value="B3U-1000P-2P-SMD"/>
 <part name="USER" library="Seeed-Switch-2016" deviceset="SMD-BUTTON(2P-3.0X2.5X1.2+0.4MM)" device="-B3U-1000P-2P-SMD" value="B3U-1000P-2P-SMD"/>
-<part name="R7" library="Seeed-Resistor-2016" deviceset="SMD-RES-1K-5%-1/10W(0603)" device="" value="1K 1/10W"/>
+<part name="R7" library="Seeed-Resistor-2016" deviceset="SMD-RES-0R-5%-1/10W(0603)" device="" value="0R"/>
 <part name="U$5" library="PatternAgents-Beautify" deviceset="GND" device=""/>
-<part name="$$U$2" library="thingSoC" deviceset="TSOC-LOGO" device="-SMALL"/>
 <part name="Y100" library="Seeed-Crystal Oscillator-2016" deviceset="SMD-CRYSTAL-32.768KHZ-12.5PF-20PPM-90K(2P-L2.0X1.2MM)" device="" value="3.2768KHZ"/>
 <part name="C101" library="Seeed-Capacitor-2016" deviceset="CERAMIC-12PF-50V-5%-NPO(0603)" device="" value="12pf"/>
 <part name="C100" library="Seeed-Capacitor-2016" deviceset="CERAMIC-12PF-50V-5%-NPO(0603)" device="" value="12pf"/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
-<part name="OSC" library="SparkFun-FreqCtrl" deviceset="OSCILLATOR" device="5X3"/>
+<part name="Y101" library="SparkFun-FreqCtrl" deviceset="OSCILLATOR" device="5X3"/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
 <part name="U100" library="PatternAgents-Cypress" deviceset="FM24W256" device="-G"/>
 <part name="C102" library="Seeed-Capacitor-2016" deviceset="CERAMIC-100NF-50V-10%-X7R(0603)" device="" value="100nf"/>
 <part name="U$21" library="PatternAgents-Beautify" deviceset="GND" device=""/>
 <part name="U$24" library="PatternAgents-Beautify" deviceset="GND" device=""/>
-<part name="$$U$1" library="thingSoC" deviceset="TSOC-LOGO" device="-SMALL"/>
+<part name="C103" library="Seeed-Capacitor-2016" deviceset="CERAMIC-100NF-50V-10%-X7R(0603)" device="" value="100nf"/>
+<part name="GND4" library="supply1" deviceset="GND" device=""/>
+<part name="C17" library="Seeed-Capacitor-2016" deviceset="TANTALUM-SMD-47UF-6.3V(AVX-A)" device="" value="47uf"/>
+<part name="U$6" library="PatternAgents-Beautify" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17297,13 +17363,12 @@ Digital Programming Connector</text>
 </instance>
 <instance part="R7" gate="G$1" x="401.32" y="88.9" rot="R180"/>
 <instance part="U$5" gate="G$1" x="140.97" y="276.86"/>
-<instance part="$$U$2" gate="G$1" x="461.01" y="247.65"/>
 <instance part="Y100" gate="G$1" x="58.42" y="261.62" rot="MR0"/>
 <instance part="C101" gate="G$1" x="71.12" y="251.46" rot="MR270"/>
 <instance part="C100" gate="G$1" x="48.26" y="251.46" rot="MR270"/>
 <instance part="GND21" gate="1" x="71.12" y="241.3"/>
 <instance part="GND22" gate="1" x="48.26" y="241.3"/>
-<instance part="OSC" gate="G$1" x="114.3" y="254"/>
+<instance part="Y101" gate="G$1" x="114.3" y="254"/>
 <instance part="GND24" gate="1" x="129.54" y="243.84" rot="MR0"/>
 <instance part="U100" gate="G$1" x="415.29" y="327.66" smashed="yes">
 <attribute name="NAME" x="407.67" y="341.122" size="1.778" layer="95"/>
@@ -17312,7 +17377,10 @@ Digital Programming Connector</text>
 <instance part="C102" gate="G$1" x="440.69" y="327.66" rot="R90"/>
 <instance part="U$21" gate="G$1" x="440.69" y="317.5"/>
 <instance part="U$24" gate="G$1" x="393.7" y="314.96"/>
-<instance part="$$U$1" gate="G$1" x="459.74" y="29.21"/>
+<instance part="C103" gate="G$1" x="93.98" y="251.46" rot="MR270"/>
+<instance part="GND4" gate="1" x="93.98" y="241.3" rot="MR0"/>
+<instance part="C17" gate="G$1" x="433.07" y="156.21" rot="R270"/>
+<instance part="U$6" gate="G$1" x="433.07" y="147.32"/>
 </instances>
 <busses>
 </busses>
@@ -17503,7 +17571,7 @@ Digital Programming Connector</text>
 <wire x1="48.26" y1="247.65" x2="48.26" y2="243.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="OSC" gate="G$1" pin="GND"/>
+<pinref part="Y101" gate="G$1" pin="GND"/>
 <pinref part="GND24" gate="1" pin="GND"/>
 <wire x1="127" y1="251.46" x2="129.54" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="251.46" x2="129.54" y2="246.38" width="0.1524" layer="91"/>
@@ -17535,6 +17603,16 @@ Digital Programming Connector</text>
 <pinref part="U100" gate="G$1" pin="A0"/>
 <wire x1="402.59" y1="325.12" x2="393.7" y2="325.12" width="0.1524" layer="91"/>
 <junction x="402.59" y="325.12"/>
+</segment>
+<segment>
+<pinref part="GND4" gate="1" pin="GND"/>
+<pinref part="C103" gate="G$1" pin="2"/>
+<wire x1="93.98" y1="243.84" x2="93.98" y2="247.65" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C17" gate="G$1" pin="-"/>
+<pinref part="U$6" gate="G$1" pin="GND"/>
+<wire x1="433.07" y1="152.4" x2="433.07" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="P1_2" class="0">
@@ -17959,7 +18037,7 @@ Digital Programming Connector</text>
 <pinref part="A" gate="TSOC" pin="!DCD"/>
 </segment>
 <segment>
-<pinref part="OSC" gate="G$1" pin="OUT"/>
+<pinref part="Y101" gate="G$1" pin="OUT"/>
 <wire x1="127" y1="256.54" x2="132.08" y2="256.54" width="0.1524" layer="91"/>
 <label x="132.08" y="256.54" size="1.4224" layer="95" font="vector" ratio="10" xref="yes"/>
 </segment>
@@ -18043,6 +18121,11 @@ Digital Programming Connector</text>
 <wire x1="424.18" y1="185.42" x2="406.4" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="406.4" y1="185.42" x2="406.4" y2="193.04" width="0.1524" layer="91"/>
 <junction x="406.4" y="193.04"/>
+</segment>
+<segment>
+<wire x1="144.78" y1="149.86" x2="154.94" y2="149.86" width="0.1524" layer="91"/>
+<label x="154.94" y="149.86" size="1.27" layer="95" font="vector" ratio="10" rot="MR180" xref="yes"/>
+<pinref part="JTAG" gate="G$1" pin="12"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -18392,13 +18475,9 @@ Digital Programming Connector</text>
 <pinref part="JTAG" gate="G$1" pin="11"/>
 </segment>
 <segment>
-<wire x1="144.78" y1="149.86" x2="154.94" y2="149.86" width="0.1524" layer="91"/>
-<label x="154.94" y="149.86" size="1.27" layer="95" font="vector" ratio="10" rot="MR180" xref="yes"/>
-<pinref part="JTAG" gate="G$1" pin="12"/>
-</segment>
-<segment>
 <pinref part="L2" gate="L" pin="1"/>
-<wire x1="426.72" y1="182.88" x2="441.96" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="426.72" y1="182.88" x2="433.07" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="433.07" y1="182.88" x2="441.96" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="452.12" y1="182.88" x2="441.96" y2="182.88" width="0.1524" layer="91"/>
 <pinref part="L1" gate="L" pin="1"/>
 <wire x1="452.12" y1="193.04" x2="441.96" y2="193.04" width="0.1524" layer="91"/>
@@ -18414,16 +18493,23 @@ Digital Programming Connector</text>
 <wire x1="441.96" y1="193.04" x2="436.88" y2="193.04" width="0.1524" layer="91"/>
 <junction x="441.96" y="193.04"/>
 <label x="436.88" y="193.04" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+<pinref part="C17" gate="G$1" pin="+"/>
+<wire x1="433.07" y1="160.02" x2="433.07" y2="182.88" width="0.1524" layer="91"/>
+<junction x="433.07" y="182.88"/>
 </segment>
 <segment>
-<pinref part="OSC" gate="G$1" pin="VCC"/>
+<pinref part="Y101" gate="G$1" pin="VCC"/>
 <wire x1="101.6" y1="256.54" x2="99.06" y2="256.54" width="0.1524" layer="91"/>
-<pinref part="OSC" gate="G$1" pin="EN"/>
-<wire x1="99.06" y1="256.54" x2="96.52" y2="256.54" width="0.1524" layer="91"/>
+<pinref part="Y101" gate="G$1" pin="EN"/>
+<wire x1="99.06" y1="256.54" x2="93.98" y2="256.54" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="256.54" x2="88.9" y2="256.54" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="251.46" x2="99.06" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="251.46" x2="99.06" y2="256.54" width="0.1524" layer="91"/>
 <junction x="99.06" y="256.54"/>
-<label x="96.52" y="256.54" size="1.4224" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+<label x="88.9" y="256.54" size="1.4224" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+<pinref part="C103" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="255.27" x2="93.98" y2="256.54" width="0.1524" layer="91"/>
+<junction x="93.98" y="256.54"/>
 </segment>
 <segment>
 <pinref part="U100" gate="G$1" pin="VCC"/>

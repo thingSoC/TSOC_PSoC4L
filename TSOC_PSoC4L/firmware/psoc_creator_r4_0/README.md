@@ -4,7 +4,15 @@ Note Bene : These project firmware bundles require PSOC Creator Version 4.0 or l
 
 Firmware Source and Images for the TSOC_PSoC4L board.
 
-1) rsvpsis.usbloopbak : Initial board bringup bundle - USB loopback tests only.
+1) rsvpsis_4l_typ.alpha1_0.zip : Alpha board bringup bundle.
+
+   USB/HID Bootloader (10 seconds after reset)
+
+   USB/CDC ComX: Interface (after bootloader exits)
+
+   rsvpsis Command Line Interface - basic test functions
+
+   "test" functions UART, ADC, LED, CrossConnect
 
 
 The TSOC_PSoC4L is a [PSoC4-Programmable System on Chip](http://www.cypress.com/documentation/datasheets/psoc-4-psoc-4200l-family-datasheet)
