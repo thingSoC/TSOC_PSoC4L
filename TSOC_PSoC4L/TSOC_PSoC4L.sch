@@ -16333,26 +16333,6 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 </device>
 </devices>
 </deviceset>
-<deviceset name="SMD-RES-0R-5%-1/10W(0603)" prefix="R" uservalue="yes">
-<description>301010292</description>
-<gates>
-<gate name="G$1" symbol="RES" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="R0603">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MPN" value="RC0603JR-070RL" constant="no"/>
-<attribute name="VALUE" value="0R"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="SMD-RES-1K-5%-1/10W(0603)" prefix="R" uservalue="yes">
 <description>301010291</description>
 <gates>
@@ -17196,7 +17176,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="VCC" library="PatternAgents-ProtoPads" deviceset="JMP-3-1_2" device=""/>
 <part name="RESET" library="Seeed-Switch-2016" deviceset="SMD-BUTTON(2P-3.0X2.5X1.2+0.4MM)" device="-B3U-1000P-2P-SMD" value="B3U-1000P-2P-SMD"/>
 <part name="USER" library="Seeed-Switch-2016" deviceset="SMD-BUTTON(2P-3.0X2.5X1.2+0.4MM)" device="-B3U-1000P-2P-SMD" value="B3U-1000P-2P-SMD"/>
-<part name="R7" library="Seeed-Resistor-2016" deviceset="SMD-RES-0R-5%-1/10W(0603)" device="" value="0R"/>
 <part name="U$5" library="PatternAgents-Beautify" deviceset="GND" device=""/>
 <part name="Y100" library="Seeed-Crystal Oscillator-2016" deviceset="SMD-CRYSTAL-32.768KHZ-12.5PF-20PPM-90K(2P-L2.0X1.2MM)" device="" value="3.2768KHZ"/>
 <part name="C101" library="Seeed-Capacitor-2016" deviceset="CERAMIC-12PF-50V-5%-NPO(0603)" device="" value="12pf"/>
@@ -17361,7 +17340,6 @@ Digital Programming Connector</text>
 <attribute name="NAME" x="151.13" y="298.45" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="147.32" y="295.91" size="1.27" layer="96" ratio="10"/>
 </instance>
-<instance part="R7" gate="G$1" x="401.32" y="88.9" rot="R180"/>
 <instance part="U$5" gate="G$1" x="140.97" y="276.86"/>
 <instance part="Y100" gate="G$1" x="58.42" y="261.62" rot="MR0"/>
 <instance part="C101" gate="G$1" x="71.12" y="251.46" rot="MR270"/>
@@ -18160,20 +18138,6 @@ Digital Programming Connector</text>
 </net>
 <net name="VBUS" class="0">
 <segment>
-<pinref part="D1" gate="G$1" pin="+"/>
-<wire x1="388.62" y1="101.6" x2="394.97" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="388.62" y1="101.6" x2="388.62" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="388.62" y1="88.9" x2="397.51" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="388.62" y1="88.9" x2="388.62" y2="81.28" width="0.1524" layer="91"/>
-<junction x="388.62" y="88.9"/>
-<wire x1="388.62" y1="81.28" x2="411.48" y2="81.28" width="0.1524" layer="91"/>
-<label x="411.48" y="81.28" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
-<pinref part="USB" gate="G$1" pin="VBUS"/>
-<wire x1="342.9" y1="101.6" x2="388.62" y2="101.6" width="0.1524" layer="91"/>
-<junction x="388.62" y="101.6"/>
-</segment>
-<segment>
 <label x="411.48" y="40.64" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
 <wire x1="403.86" y1="31.75" x2="403.86" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="VIN"/>
@@ -18187,6 +18151,21 @@ Digital Programming Connector</text>
 <junction x="403.86" y="40.64"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 <pinref part="LED2" gate="G$1" pin="+"/>
+</segment>
+<segment>
+<pinref part="U3" gate="U1" pin="VBUS"/>
+<wire x1="114.3" y1="327.66" x2="139.7" y2="327.66" width="0.1524" layer="91"/>
+<label x="139.7" y="327.66" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
+</segment>
+<segment>
+<label x="411.48" y="88.9" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
+<pinref part="D1" gate="G$1" pin="+"/>
+<wire x1="388.62" y1="101.6" x2="394.97" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="388.62" y1="101.6" x2="388.62" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="USB" gate="G$1" pin="VBUS"/>
+<wire x1="342.9" y1="101.6" x2="388.62" y2="101.6" width="0.1524" layer="91"/>
+<junction x="388.62" y="101.6"/>
+<wire x1="411.48" y1="88.9" x2="388.62" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="USB1_DM" class="0">
@@ -18519,18 +18498,6 @@ Digital Programming Connector</text>
 <wire x1="440.69" y1="335.28" x2="444.5" y2="335.28" width="0.1524" layer="91"/>
 <junction x="440.69" y="335.28"/>
 <label x="444.5" y="335.28" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
-</segment>
-</net>
-<net name="P13_2" class="0">
-<segment>
-<pinref part="U3" gate="U1" pin="VBUS"/>
-<wire x1="114.3" y1="327.66" x2="139.7" y2="327.66" width="0.1524" layer="91"/>
-<label x="139.7" y="327.66" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="405.13" y1="88.9" x2="411.48" y2="88.9" width="0.1524" layer="91"/>
-<label x="411.48" y="88.9" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
 </segment>
 </net>
 </nets>
