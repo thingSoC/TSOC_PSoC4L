@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="25" altunitdist="mil" altunit="mil"/>
+<grid distance="10" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="25" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -6986,7 +6986,7 @@ design rules under a new name.</description>
 <wire x1="20.32" y1="16.764" x2="20.32" y2="19.812" width="0.6096" layer="16"/>
 <wire x1="21.59" y1="16.764" x2="20.32" y2="16.764" width="0.6096" layer="1"/>
 <wire x1="20.32" y1="16.764" x2="18.796" y2="16.764" width="0.6096" layer="1"/>
-<wire x1="17.4244" y1="11.9126" x2="17.4244" y2="11.0236" width="0.6096" layer="1"/>
+<wire x1="17.4244" y1="11.9126" x2="17.4244" y2="11.0236" width="0.1778" layer="1"/>
 <wire x1="17.4244" y1="11.0236" x2="17.272" y2="10.922" width="0.1778" layer="1"/>
 <wire x1="17.4244" y1="11.9126" x2="17.526" y2="12.192" width="0.1778" layer="1"/>
 <contactref element="Y101" pad="4"/>
