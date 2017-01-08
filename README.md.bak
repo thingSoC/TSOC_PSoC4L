@@ -25,8 +25,8 @@ The TSOC_PSoC4L is a low cost, embeddable module featuring a PSoC4 "Large" devic
 * Optional 32Khz Oscillator for Real-Time Clock
 * Optional High Precision Oscillator
 * Optional FM24W256-G NVSRAM (32K Bytes Nonvolatile SRAM)
-* [thingSoC Compliant Module]http://www.thingsoc.com()
-* [Mikrobus Compatible Module](http://www.mikroe.com/mikrobus/) 
+* <a href="http://www.thingsoc.com">thingSoC Compliant Module</a></li>
+* <a href="http://www.mikroe.com/mikrobus/">Mikrobus Compatible Module</a></li> 
 
 
 [![thingSoC TSOC_PSoC4L](https://raw.githubusercontent.com/thingSoC/TSOC_PSoC4L/master/TSOC_PSoC4L/images/TSOC_PSoC4L_model.png?raw=true)TSOC_PSoC4L](https://github.com/thingSoC/TSOC_PSoC4L)
@@ -37,35 +37,22 @@ These reference designs can serve as starting templates for user designs.
 
 ---------------------------------------
 
-## TSOC_PSoC4L Instructions
+## TSOC_PSoC4L Application Pictures
 
-The TSOC_PSoC4L comes preprogrammed with a command line interpreter (CLI)
-that runs on the enumerated USB COM port by default. It can be changed to
-run onother ports interactively.
+ Coming in December 2016!
 
-Immediately after plugging in the USB or Li-Po battery power the TSOC_PSoC4L will :
 
-1) Runs a USB bootloader for ten (10) seconds to allow you to update the firmware.
-   Use the [Cypress Bootloader Host](http://www.cypress.com/documentation/application-notes/an68272-psoc-3-psoc-4-psoc-5lp-and-psoc-analog-coprocessor-uart)
-   to load new firmware into the device to customize it.
+---------------------------------------
+## TSOC_PSoC4L Programming
 
-2) Runs the RSVP command line interpreter with the following commands :
-  * commands : display the list of currenyl available commands
-  * info : display the firmware revision number and other board details
-  * echo : echo the current command
-  * test adc : display all current ADC channel values
-  * test uart : sends test string to all UART ports
-  * test boot : run the bootloader
-  * console x : changes the console to port "X"
-  * connect x y : connect port x to port y until the user button is pressed to exit  
-    where :  X (Y) = 
-    0 - USB Port
-    1 - UART1 Port
-    2 - UART2 Port
-    3 - I2C1 Port
-    4 - I2C2 Port
-    5 - SPI1 Port
-    6 - SPI2 Port
+You can reprogram the board using any FTDI compatible USB to UART adapter :
+
+In order to reprogram the Cypress PSoC4 device, you will need to download and install the PSoC Creator tool, which includes a serial bootloader host application.
+
+Select Tools -> Bootloader Host 
+
+Then select the hex (cyacd) file that you wish to program, and the COM: port of your device. Proess the "Upload" button to reflash the device.
+
 
 ---------------------------------------
 ## Other Applications

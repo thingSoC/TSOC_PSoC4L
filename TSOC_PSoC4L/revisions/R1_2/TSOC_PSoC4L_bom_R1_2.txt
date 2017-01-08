@@ -4,13 +4,14 @@ Qty Value             Device                               Package           Par
 1   AP2112K-3.3V      V_REG_LDOSMD                         SOT23-5           U1                                    Voltage Regulator LDO                                                                                         
 1   MCP73831          MCP73831                             SOT23-5           U2                                    Miniature single cell                     
 1   CY8C4247AZI-L433  CY8C4247AZI-L433                     TQFP-7X7-48       U3                                    Cypress PSoC® 4 -                         
-8   100nf             CERAMIC-100NF-50V-10%-X7R(0603)      C0603             C1, C4, C8, C11, C14, C16, C102, C103 302010138                                                                                                     
+8   100nf             CERAMIC-100NF-50V-10%-X7R(0603)      C0603             C1, C8, C11, C14, C16, C102, C103     302010138                                                                                                     
 3   10uf              CERAMIC-10UF-10V-10%-X5R(0603)       C0603             C3, C5, C7                            302010103                                                                                                     
 7   1uf               CERAMIC-1UF-25V-10%-X7R(0603)        C0603             C2, C6, C9, C10, C12, C13, C15        302010139                                                                                                     
 1   47uf              TANTALUM-SMD-47UF-6.3V(AVX-A)        AVX-A             C17                                   302020005                                                                                                     
 2   1K 1/10W          SMD-RES-1K-5%-1/10W(0603)            R0603             R1, R2                                301010291                                                                                                     
 1   1M 1/10W          SMD-RES-1M-5%-1/10W(0603)            R0603             R3                                    301010100                                                                                                     
-2   22R               SMD-RES-22R-5%-1/10W(0603)           R0603             R5, R6                                301010289                                                                                                     
+2   22R               SMD-RES-22R-5%-1/10W(0603)           R0603             R5, R6                                301010289
+4   10K 1/10W         SMD-RES-1M-5%-1/10W(0603)            R0603             R8, R9, R10, R11                                                                                               
 3   330OHM-500MA      SMD-FERRITE-CHIP-120-OHM-500MA(0603) L0603             L1, L2, L3                            303030001                                                                                                     
 2   20V-1A            SMD-DIODE-SCHOTTKY-20V-1A(SOD-123)   SOD-123           D1, D2                                304020034                                                                                                     
 1   500mA-PTC         PTCSMD                               PTC-1206          F1                                    Resettable Fuse PTC                                                                                           
@@ -25,7 +26,8 @@ Qty Value             Device                               Package           Par
 
 Do Not Populate!
 ----------------
-1   DNP               SMD-RES-22R-5%-1/10W(0603)           R0603             R4                                    301010289                                                                                                     
+1   DNP               470pf                                C0603             C4
+1   DNP               SMD-RES-22R-5%-1/10W(0603)           R0603             R4                                                                                                                                         
 1   FM24W256-G        FM24W256-G                           SO08              U100                                  I2C FRAM FM24W256                                                                                             
 2   12pf              CERAMIC-12PF-50V-5%-NPO(0603)        C0603             C100, C101                            302010067                                                                                                     
 1   3.2768KHZ         SMD-CRYSTAL-32.768KHZ-12.5PF-20PPM   X2-SMD            Y100                                  306010020                                                                                                     
