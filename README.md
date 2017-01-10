@@ -14,8 +14,6 @@ The TSOC_PSoC4L is a low cost, embeddable module featuring a PSoC4 "Large" devic
 * Programmable Analog Blocks (4 blocks)
 * Programmable Digital Blocks (8 blocks)
 * 3.3 Volt or 5.0 Volt Operation
-* Capacitive Sensing
-* Segment LCD Drive
 * Serial Communication (3 Ports)
 * Counter/Timers/PWMs (8 Ports)
 * CAN (controller area network) Controller
@@ -25,7 +23,7 @@ The TSOC_PSoC4L is a low cost, embeddable module featuring a PSoC4 "Large" devic
 * Optional 32Khz Oscillator for Real-Time Clock
 * Optional High Precision Oscillator
 * Optional FM24W256-G NVSRAM (32K Bytes Nonvolatile SRAM)
-* [thingSoC Compliant Module]http://www.thingsoc.com()
+* [thingSoC Compliant Module](http://www.thingsoc.com)
 * [Mikrobus Compatible Module](http://www.mikroe.com/mikrobus/) 
 
 
