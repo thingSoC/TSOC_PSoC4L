@@ -4,7 +4,7 @@ Note Bene : These project firmware bundles require PSOC Creator Version 4.0 or l
 
 Firmware Source and Images for the TSOC_PSoC4L board.
 
-1) rsvpsis_4l_typ.R1_3_0.zip : First Release bundle.
+1) rsvpsis_4l_typ.R1_3_1.zip : First Release bundle.
 
    USB/HID Bootloader (10 seconds after reset)
 
